@@ -13,7 +13,7 @@ class Model
     private:
         m3::vec3 position;
         m3::vec3 rotation;
-        m3::vec3 scale;
+        m3::vec3 scl;
 
         Mesh mesh;
 
@@ -23,6 +23,10 @@ class Model
     public:
         m3::mat4 get_matrix();
         Mesh get_mesh();
+
+        void translate(float x, float y, float z);
+        void rotate(float x, float y, float z);
+        void scale(float x, float y, float z);
 };
 
 #endif
